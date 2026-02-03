@@ -1477,7 +1477,14 @@ html, body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 5;
+}
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent; /* or match your page background */
+  z-index: -1;
 }
 @media (max-width: 768px) {
   .row-1 {
@@ -1579,13 +1586,24 @@ html, body {
 
 
 .resume-section-title {
-  color: var(--accent-green); /* your existing green */
+  color: #3E9E52;
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--accent-green);
-  padding-bottom: 0.4rem;
+  margin-bottom: 1.75rem;
+  display: inline-block;
+  position: relative;
 }
+.resume-section-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-top: 0.35rem;
+  background-color: #3E9E52;
+  border-radius: 2px;
+}
+
+
 .resume-section {
   margin-bottom: 3.25rem;
   .resume-item {
@@ -1614,15 +1632,18 @@ html, body {
   margin: 4rem auto;
   padding: 3.5rem 3rem;
 
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* Frosted glass */
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
 
-  border-radius: 14px;
+  border-radius: 16px;
+
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+    0 20px 40px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
+
 
 
 /* =========================
@@ -1754,14 +1775,7 @@ html, body {
     transform: translateY(0);
   }
 }
-.resume-section-title {
-  color: var(--accent-green);
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--accent-green);
-  padding-bottom: 0.4rem;
-}
+
 .card-grid {
   row-gap: 2.5rem;
 }
