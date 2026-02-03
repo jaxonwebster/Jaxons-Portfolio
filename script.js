@@ -293,32 +293,3 @@ window.addEventListener("DOMContentLoaded", () => {
   // spawn rate adapts to screen size
   setInterval(createPraise, isMobile ? 2600 : 1500);
 });
-const counters = document.querySelectorAll('.count');
-
-counters.forEach(counter => {
-  const target = parseFloat(counter.dataset.target);
-  const isDecimal = target % 1 !== 0;
-
-  // Smaller numbers = slower
-  const duration = Math.max(1200, 3000 / target); // ms
-  const frameRate = 16; // ~60fps
-  const totalSteps = Math.round(duration / frameRate);
-
-  let current = 0;
-  let step = target / totalSteps;
-
-  const update = () => {
-    current += step;
-
-    if (current < target) {
-      counter.innerText = isDecimal
-        ? current.toFixed(1)
-        : Math.floor(current);
-      requestAnimationFrame(update);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  update();
-});
