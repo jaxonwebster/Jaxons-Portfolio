@@ -1397,6 +1397,12 @@ html, body {
   overflow: hidden;
   z-index: 2;
 }
+.resume-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+}
+
 
 .hero-words {
   position: absolute;
@@ -1533,11 +1539,58 @@ html, body {
   padding: 4rem 2rem 6rem;
   z-index: 2;
 }
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.resume-date {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.resume-subtitle {
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+  color: #444;
+}
+
+.resume-item ul {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.resume-item li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .resume-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-date {
+    font-size: 0.85rem;
+  }
+}
+
 
 .resume-section-title {
-  margin: 4rem 0 1.5rem;
-  font-size: 1.6rem;
-  font-weight: 600;
+  color: var(--accent-green); /* your existing green */
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-green);
+  padding-bottom: 0.4rem;
+}
+.resume-section {
+  margin-bottom: 3.25rem;
+  .resume-item {
+  margin-bottom: 2rem;
+}
 }
 
 /* =========================
@@ -1557,15 +1610,18 @@ html, body {
 }
 /* Full-width gradient under hero */
 .resume-background {
-  min-height: 100vh; /* ensures it has visible height */
-  width: 100%;
-  z-index: 0;
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #f5f7ff 15%,
-    #e6ecff 100%
-  );
+  max-width: 850px;
+  margin: 4rem auto;
+  padding: 3.5rem 3rem;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
 }
 
 
@@ -1577,6 +1633,15 @@ html, body {
   position: relative;
   z-index: 3;
 }
+.resume-page {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 35%,
+    rgba(64, 160, 90, 0.15) 100%
+  );
+}
+
 
 .resume-card::before {
   content: "";
@@ -1690,9 +1755,12 @@ html, body {
   }
 }
 .resume-section-title {
-  display: inline-block;
+  color: var(--accent-green);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-green);
   padding-bottom: 0.4rem;
-  border-bottom: 3px solid #3E9E52;
 }
 .card-grid {
   row-gap: 2.5rem;
