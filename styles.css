@@ -1658,8 +1658,8 @@ html, body {
   background: linear-gradient(
     to bottom,
     #ffffff 0%,
-    #ffffff 35%,
-    rgba(64, 160, 90, 0.15) 100%
+    #ddeee8 35%,
+    rgba(64, 160, 90, 0.15) 90%
   );
 }
 
@@ -1694,109 +1694,8 @@ html, body {
 }
 
 
-.flip-card {
-  perspective: 1200px;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.9s ease,
-    transform 0.9s ease;
-}
-.flip-card.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.flip-card input {
-  display: none;
-}
-
-.flip-card-inner {
-  position: relative;
-  height: 230px;
-  transform-style: preserve-3d;
-  transition: transform 0.7s ease;
-}
-
-/* Flip on click */
-.flip-card input:checked + .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* =========================
-   CARD STYLES
-========================= */
-
-.resume-card {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  padding: 2.25rem;
-  border-radius: 18px;
-
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  backface-visibility: hidden;
-  transition: 
-    background 0.25s ease,
-    box-shadow 0.25s ease;
-}
-.resume-card.front::after {
-  content: "↻";
-  position: absolute;
-  bottom: 16px;
-  right: 18px;
-  font-size: 0.85rem;
-  opacity: 0.4;
-}
-.card-grid > .flip-card {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-.card-grid > .flip-card:nth-child(1) { animation-delay: 0.05s; }
-.card-grid > .flip-card:nth-child(2) { animation-delay: 0.15s; }
-.card-grid > .flip-card:nth-child(3) { animation-delay: 0.25s; }
-.card-grid > .flip-card:nth-child(4) { animation-delay: 0.35s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .card-grid {
   row-gap: 2.5rem;
-}
-
-
-/* Hover color (even before flip) */
-.flip-card:hover .resume-card {
-  background: rgba(245, 248, 255, 0.85);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-}
-.flip-card:hover {
-  transform: translateY(-6px);
-}
-/* Flipped color (stronger) */
-.flip-card input:checked + .flip-card-inner .resume-card {
-  background: rgba(230, 236, 255, 0.9);
-}
-
-/* Back side */
-.resume-card.back {
-  transform: rotateY(180deg);
 }
 
 /* Typography */
@@ -1821,6 +1720,25 @@ html, body {
   line-height: 1.4;
 }
 
+@media (max-width: 768px) {
+  .resume-page .resume-background {
+    margin: 2rem 1rem;      /* space from screen edges */
+    padding: 2.25rem 1.5rem;
+    border-radius: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .stat .number {
+    font-size: 1.75rem;
+  }
+}
 
 /* =========================
    ENDORSEMENTS HERO
