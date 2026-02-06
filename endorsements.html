@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Endorsements | Jaxon Webster</title>
   <link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body class="transparent-nav endorsements-page">
 
@@ -25,25 +29,34 @@
   <a href="endorsements.html">Endorsements</a>
 </nav>
 
-<!-- =========================
-     HERO
-========================== -->
-<!-- =========================
-     HERO – FLOATING PRAISE
-========================== -->
-<section class="endorsements-hero">
+<section class="endorsement-hero">
+  <div class="endorsement-hero-inner">
 
-  <!-- Floating praise layer -->
-  <div class="praise-layer" id="praiseLayer"></div>
+    <!-- LEFT -->
+    <div class="endorsement-hero-left">
+      <h1 class="endorsement-hero-title">
+        Endorsements
+      </h1>
 
-  <!-- Centered title -->
-  <div class="hero-center">
-    <h1 class="hero-title">Endorsements</h1>
+      <p class="endorsement-hero-subtitle">
+  Trusted by <span class="endorsement-rotating-word"></span>
+</p>
+
+
+      <div class="endorsement-hero-buttons">
+<a href="#endorsements" class="btn primary">View Endorsements</a>
+        <a href="index.html#contact" class="btn secondary">Contact Me</a>
+        <a href="index.html" class="btn secondary">Home</a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="endorsement-hero-right">
+      <img src="images/me.png" alt="Jaxon Webster illustration">
+    </div>
+
   </div>
-
 </section>
-
-
 
 
 
@@ -51,7 +64,11 @@
 <!-- =========================
      CONTENT
 ========================== -->
-<main class="endorsements-content">
+<section class="endorsements-content-wrapper" id="endorsements">
+  <h2 class="endorsements-title fade-in">
+  What is all the hype about?
+</h2>
+
 
   <section class="quote-block fade-in">
     <span class="quote-mark">“</span>
@@ -72,10 +89,15 @@
   <section class="quote-block fade-in">
     <span class="quote-mark">“</span>
     <blockquote>
-      It is a pleasure to strongly endorse Jaxon Webster. My recommendation is based upon 1 year as his Career Coach and direct beneficiary of his work as a career data analyst... Jaxon can connect the dots. He asks key questions that clarify processes. He seeks out the analytics, writes Python scripts, and leaverages SQL creating Tableau dashboards and reports that drive decisions. He is a delight to work with and knows how to build and interact with teams."
+      It is a pleasure to strongly endorse Jaxon Webster. My recommendation is based upon 1 year as his Career Coach and direct beneficiary of his work as a career data analyst... Jaxon can connect the dots. He asks key questions that clarify processes. He seeks out the analytics, writes Python scripts, and leverages SQL creating Tableau dashboards and reports that drive decisions. He is a delight to work with and knows how to build and interact with teams."
     </blockquote>
-    <p class="quote-author">— Reid Grawe, Director of Placement at Brigham Young University</p>
+    <p class="quote-author">
+      — Reid Grawe, Director of Placement at Brigham Young University
+    </p>
   </section>
+
+</section>
+
 
 </main>
 <!-- Footer (same as About page) -->
@@ -119,23 +141,38 @@
     <p class="footer-bottom">© 2026 Jaxon Webster</p>
   </footer>
 <script>
-  const quotes = document.querySelectorAll('.fade-in');
+  const words = [
+    "founders",
+    "teams",
+    "creators",
+    "brands",
+    "clients"
+  ];
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  const wordEl = document.querySelector(".endorsement-rotating-word");
+  let index = 0;
 
-  quotes.forEach(q => observer.observe(q));
+  function rotateWord() {
+    // fade out
+    wordEl.style.opacity = 0;
+
+    setTimeout(() => {
+      wordEl.textContent = words[index];
+      wordEl.style.opacity = 1;
+      index = (index + 1) % words.length;
+    }, 300);
+  }
+
+  // initial word
+  rotateWord();
+
+  // rotate every 2.5 seconds
+  setInterval(rotateWord, 2500);
 </script>
-<script src="script.js"></script>
+<script>
+  document.documentElement.classList.add('js');
+</script>
+
 
 </body>
 </html>
