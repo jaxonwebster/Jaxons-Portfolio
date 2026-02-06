@@ -991,7 +991,6 @@ html, body {
   float: right;
   width: 350px;
   margin: 0 0 1.5rem 2rem;
-  border-radius: 16px;
   object-fit: cover;
   
   shape-outside: inset(0 round 16px);
