@@ -989,11 +989,11 @@ html, body {
 /* Float image to the right */
 .about-float-image {
   float: right;
-  width: 320px;
+  width: 350px;
   margin: 0 0 1.5rem 2rem;
   border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  
   shape-outside: inset(0 round 16px);
 }
 @media (max-width: 768px) {
