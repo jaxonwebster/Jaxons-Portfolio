@@ -2310,7 +2310,7 @@ blockquote {
    ENDORSEMENT HERO
 ========================= */
 .endorsement-hero {
-  padding-bottom: 3rem;
+  padding: 6rem 2rem;
   background: #ffffff;
   margin-bottom: 6rem;
   padding-bottom: 3rem;
@@ -2460,7 +2460,7 @@ blockquote {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: 0;
+
   width: 100vw;
   background: linear-gradient(
     to bottom,
