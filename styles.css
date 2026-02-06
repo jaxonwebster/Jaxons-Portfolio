@@ -2391,6 +2391,12 @@ blockquote {
     max-width: 300px;
   }
 }
+@media (max-width: 768px) {
+  .endorsement-rotating-word {
+    min-width: auto;
+  }
+}
+
 .btn {
   padding: 0.75rem 1.75rem;
   border-radius: 8px;
@@ -2423,11 +2429,15 @@ blockquote {
 
 /* Rotating word */
 .endorsement-rotating-word {
-  font-weight: 650;
+  font-weight: 700;
   color: #3f8f4e; /* matches green accent in reference */
   margin-left: 0.25ch;
-  display: inline-block;
-  min-width: 9ch;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  width: auto;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
