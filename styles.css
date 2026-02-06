@@ -318,8 +318,6 @@ html, body {
   margin: 0 auto;
 }
 
-
-
 .project-card {
   display: flex;
   flex-direction: column;
@@ -329,18 +327,19 @@ html, body {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* scroll reveal */
+  opacity: 1;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 1.2s ease;
 }
+
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
-/* Scroll reveal animation */
-.project-card {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 1.2s ease;
-}
+
 
 /* When visible */
 .project-card.reveal {
@@ -655,7 +654,6 @@ html, body {
 }
 
 #rotating-word {
-  
   font-weight: 700;
   font-size: 1.48em;
   color: #3E9E52;
@@ -2323,8 +2321,6 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: auto;
-  padding-bottom: -15rem; /* keep spacing but not excessive */
   gap: 4rem;
 }
 
