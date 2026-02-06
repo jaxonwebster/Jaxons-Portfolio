@@ -76,26 +76,6 @@ if (rotatingWord) {
   }, 1600);
 }
 
-/* =========================
-   PROJECT CARD REVEAL
-========================= */
-const projectCards = document.querySelectorAll(".project-card");
-
-if (projectCards.length > 0) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  projectCards.forEach((card) => observer.observe(card));
-}
 
 /* =========================
    BACKGROUND CANVAS (DATA PULSES)
