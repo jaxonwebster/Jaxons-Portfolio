@@ -144,10 +144,10 @@
   const words = [
     "clients",
     "teams",
-    "startups",
     "brands",
     "peers",
-    "managers"
+    "managers",
+    "startups"
   ];
 
   const wordEl = document.querySelector(".endorsement-rotating-word");
@@ -167,8 +167,8 @@
   // initial word
   rotateWord();
 
-  // rotate every 2.5 seconds
-  setInterval(rotateWord, 2500);
+  // rotate every 2.0 seconds
+  setInterval(rotateWord, 2000);
 </script>
 <script>
   document.documentElement.classList.add('js');
