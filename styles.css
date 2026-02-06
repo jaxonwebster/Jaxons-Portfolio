@@ -318,6 +318,8 @@ html, body {
   margin: 0 auto;
 }
 
+
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -326,20 +328,14 @@ html, body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-  /* scroll reveal */
-  opacity: 1;
   transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 1.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
 }
-
 
 /* When visible */
 .project-card.reveal {
