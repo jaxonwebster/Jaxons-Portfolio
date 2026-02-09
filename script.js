@@ -55,9 +55,7 @@ if (rotatingWord) {
   const words = [
     "web experiences",
     "secure applications",
-    "trustworthy software",
-    "clean UI",
-    "solutions"
+    "trustworthy software"
   ];
 
   let rotateIndex = 0;

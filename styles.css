@@ -1484,6 +1484,7 @@ html, body {
   background: transparent; /* or match your page background */
   z-index: -1;
 }
+
 @media (max-width: 768px) {
   .row-1 {
     animation-duration: 18s; /* faster */
