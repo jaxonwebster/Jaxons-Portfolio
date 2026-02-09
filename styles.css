@@ -654,6 +654,8 @@ html, body {
   font-size: 1.48em;
   color: #3E9E52;
   transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 1.2em;
+  line-height: 1.2;
 }
 @media (max-width: 768px) {
   .hero-split {
@@ -675,6 +677,8 @@ html, body {
 
   #rotating-word {
     font-size: 1.2rem;
+    min-height: 1.2em;
+  line-height: 1.2;
   }
 }
 @media (max-width: 768px) {
