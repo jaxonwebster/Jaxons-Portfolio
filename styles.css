@@ -651,7 +651,7 @@ html, body {
 
 #rotating-word {
   font-weight: 700;
-  font-size: 1.48em;
+  font-size: 1.1em;
   color: #3E9E52;
   transition: opacity 0.4s ease, transform 0.4s ease;
   min-height: 1.2em;
@@ -680,8 +680,10 @@ html, body {
 
   #rotating-word {
     font-weight: 700;
-  font-size: 1.48em;
-    min-height: 1.2em;
+  font-size: 1.1em;
+  color: #3E9E52;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 1.2em;
   line-height: 1.2;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -2523,9 +2525,15 @@ blockquote {
 }
 @media (max-width: 768px) {
   .endorsement-rotating-word {
-    min-width: auto;
-    font-weight: 700;
-  font-size: 1.48em;
+   font-weight: 700;
+  font-size: 1.1em;
+  color: #3E9E52;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 1.2em;
+  line-height: 1.2;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -2562,17 +2570,14 @@ blockquote {
 /* Rotating word */
 .endorsement-rotating-word {
   font-weight: 700;
-  font-size: 1.48em;
-  color: #3f8f4e; /* matches green accent in reference */
-  margin-left: 0.25ch;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-  min-width: 0;
-  width: auto;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  font-size: 1.1em;
+  color: #3E9E52;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 1.2em;
+  line-height: 1.2;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Optional: slightly tighter look on large screens */
@@ -2636,17 +2641,14 @@ body.endorsements-page {
 /* Rotating word */
 .projects-rotating-word {
   font-weight: 700;
-  font-size: 1.48em;
-  color: #3f8f4e; /* matches green accent in reference */
-  margin-left: 0.25ch;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-  min-width: 0;
-  width: auto;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  font-size: 1.1em;
+  color: #3E9E52;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 1.2em;
+  line-height: 1.2;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Optional: slightly tighter look on large screens */
@@ -2658,17 +2660,14 @@ body.endorsements-page {
 /* Rotating word */
 .about-rotating-word {
   font-weight: 700;
-  font-size: 1.48em;
-  color: #3f8f4e; /* matches green accent in reference */
-  margin-left: 0.25ch;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-  min-width: 0;
-  width: auto;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  font-size: 1.1em;
+  color: #3E9E52;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  min-height: 1.2em;
+  line-height: 1.2;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Optional: slightly tighter look on large screens */
