@@ -5,7 +5,6 @@ const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 const closeMenu = document.getElementById("closeMenu");
 const overlay = document.querySelector(".overlay");
-const activeBubbles = [];
 
 if (menuBtn && sideMenu && closeMenu) {
   menuBtn.addEventListener("click", () => {
@@ -47,7 +46,7 @@ if (typeTarget) {
 }
 
 /* =========================
-   ROTATING WORDS
+   ROTATING WORDS (Homepage)
 ========================= */
 const rotatingWord = document.getElementById("rotating-word");
 
@@ -74,6 +73,44 @@ if (rotatingWord) {
   }, 1600);
 }
 
+/* =========================
+   ROTATING WORDS (Projects Page)
+========================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const projectRotatingWord = document.querySelector(".projects-rotating-word");
+
+  if (!projectRotatingWord) return;
+
+  const words = [
+    "Python",
+    "AWS",
+    "JavaScript",
+    "Node.js",
+    "C++",
+    "HTML",
+    "ASP.NET",
+    "SQL",
+    "CSS"
+    ];
+
+  let index = 0;
+
+  function rotateWord() {
+    projectRotatingWord.style.opacity = 0;
+
+    setTimeout(() => {
+      projectRotatingWord.textContent = words[index];
+      projectRotatingWord.style.opacity = 1;
+      index = (index + 1) % words.length;
+    }, 300);
+  }
+
+  projectRotatingWord.textContent = words[index];
+  projectRotatingWord.style.opacity = 1;
+  index++;
+
+  setInterval(rotateWord, 1800);
+});
 
 /* =========================
    BACKGROUND CANVAS (DATA PULSES)
@@ -172,10 +209,14 @@ if (canvas) {
   animate();
 }
 
+/* =========================
+   AUTO IMAGE ROTATION
+========================= */
 document.querySelectorAll(".auto-rotate").forEach(container => {
   const images = container.querySelectorAll("img");
-  let index = 0;
+  if (images.length === 0) return;
 
+  let index = 0;
   images[index].classList.add("active");
 
   setInterval(() => {
@@ -185,10 +226,9 @@ document.querySelectorAll(".auto-rotate").forEach(container => {
   }, 5000);
 });
 
-// =========================
-// WHO IS JAXON IMAGE ROTATOR
-// =========================
-
+/* =========================
+   WHO IS JAXON IMAGE ROTATOR
+========================= */
 const whoImages = [
   "images/IMG_6132.jpg",
   "images/IMG_9681.jpg",
@@ -210,58 +250,51 @@ if (whoImgElement) {
   }, 5000);
 }
 
-
-// =========================
-// CHATBOT LOGIC
-// =========================
-
+/* =========================
+   CHATBOT LOGIC
+========================= */
 const chatbotToggle = document.getElementById("chatbotToggle");
 const chatbotWindow = document.getElementById("chatbotWindow");
 const chatbotClose = document.getElementById("chatbotClose");
 const chatbotBody = document.getElementById("chatbotBody");
 
 const responses = {
-  skills: `I work with HTML, CSS, JavaScript, React, Python, SQL, and  .NET. Feel free to check out my <a href="resume.html" class="chat-link">resume</a> page for a more detailed summary!`,
+  skills: `I work with HTML, CSS, JavaScript, React, Python, SQL, and .NET. Feel free to check out my <a href="resume.html" class="chat-link">resume</a> page for a more detailed summary!`,
   experience: 'I’ve worked as a Cloud Computing TA, Data Analyst, and Web Design Intern building real-world systems. For more information, visit my <a href="resume.html" class="chat-link">resume</a> page',
-  projects: 'You should definitely check out CineNiche and my hundreds of other web design projects on my <a href="projects.html" class="chat-link">projects</a> page!',
+  projects: 'You should definitely check out CineNiche and my other web design projects on my <a href="projects.html" class="chat-link">projects</a> page!',
   contact: 'You can reach me via email, LinkedIn, or call/text me anytime! You can find my contact information <a href="#contact" class="chat-link">here</a>'
 };
 
-
-// Open / close
-chatbotToggle.addEventListener("click", () => {
-  chatbotWindow.classList.toggle("active");
-});
-
-chatbotClose.addEventListener("click", () => {
-  chatbotWindow.classList.remove("active");
-});
-
-// Question clicks
-document.querySelectorAll(".chatbot-questions button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const key = btn.dataset.question;
-    const reply = responses[key];
-    const questionText = btn.textContent;
-
-    if (reply) {
-      // User message (question)
-      const userMsg = document.createElement("p");
-      userMsg.className = "user-message";
-      userMsg.textContent = questionText;
-      chatbotBody.appendChild(userMsg);
-
-      // Bot response
-      const botMsg = document.createElement("p");
-      botMsg.className = "bot-message";
-      botMsg.innerHTML = reply;
-
-
-      // Slight delay for realism
-      setTimeout(() => {
-        chatbotBody.appendChild(botMsg);
-        chatbotBody.scrollTop = chatbotBody.scrollHeight;
-      }, 300);
-    }
+if (chatbotToggle && chatbotWindow && chatbotClose && chatbotBody) {
+  chatbotToggle.addEventListener("click", () => {
+    chatbotWindow.classList.toggle("active");
   });
-});
+
+  chatbotClose.addEventListener("click", () => {
+    chatbotWindow.classList.remove("active");
+  });
+
+  document.querySelectorAll(".chatbot-questions button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.question;
+      const reply = responses[key];
+      const questionText = btn.textContent;
+
+      if (reply) {
+        const userMsg = document.createElement("p");
+        userMsg.className = "user-message";
+        userMsg.textContent = questionText;
+        chatbotBody.appendChild(userMsg);
+
+        const botMsg = document.createElement("p");
+        botMsg.className = "bot-message";
+        botMsg.innerHTML = reply;
+
+        setTimeout(() => {
+          chatbotBody.appendChild(botMsg);
+          chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }, 300);
+      }
+    });
+  });
+}

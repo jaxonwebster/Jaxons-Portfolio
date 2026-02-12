@@ -2564,3 +2564,24 @@ body.endorsements-page {
   background-clip: text;
   color: transparent;
 }
+/* Rotating word */
+.projects-rotating-word {
+  font-weight: 700;
+  color: #3f8f4e; /* matches green accent in reference */
+  margin-left: 0.25ch;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: slightly tighter look on large screens */
+@media (min-width: 1024px) {
+  .projects-hero-subtitle {
+    font-size: 1.75rem;
+  }
+}
