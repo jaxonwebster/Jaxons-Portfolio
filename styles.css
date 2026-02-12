@@ -680,7 +680,7 @@ html, body {
 
   #rotating-word {
     font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.48em;
   color: #3E9E52;
   transition: opacity 0.4s ease, transform 0.4s ease;
   min-height: 1.2em;
@@ -2526,7 +2526,7 @@ blockquote {
 @media (max-width: 768px) {
   .endorsement-rotating-word {
    font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.48em;
   color: #3E9E52;
   transition: opacity 0.4s ease, transform 0.4s ease;
   min-height: 1.2em;
