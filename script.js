@@ -298,3 +298,36 @@ if (chatbotToggle && chatbotWindow && chatbotClose && chatbotBody) {
     });
   });
 }
+/* =========================
+   ROTATING WORDS (About Page)
+========================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutRotatingWord = document.querySelector(".about-rotating-word");
+
+  if (!aboutRotatingWord) return;
+
+  const words = [
+    "curiosity",
+    "problem solving",
+    "continuous improvement",
+    "family"
+  ];
+
+  let index = 0;
+
+  function rotateWord() {
+    aboutRotatingWord.style.opacity = 0;
+
+    setTimeout(() => {
+      aboutRotatingWord.textContent = words[index];
+      aboutRotatingWord.style.opacity = 1;
+      index = (index + 1) % words.length;
+    }, 300);
+  }
+
+  aboutRotatingWord.textContent = words[index];
+  aboutRotatingWord.style.opacity = 1;
+  index++;
+
+  setInterval(rotateWord, 2500);
+});
