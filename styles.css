@@ -679,7 +679,8 @@ html, body {
   }
 
   #rotating-word {
-    font-size: 1.2rem;
+    font-weight: 700;
+  font-size: 1.48em;
     min-height: 1.2em;
   line-height: 1.2;
   transform: translateZ(0);
@@ -2041,6 +2042,7 @@ blockquote {
   .endorsement-hero-right img {
     max-width: 220px;
     margin: 0 auto;
+    z-index: 2;
   }
 }
 @media (max-width: 768px) {
@@ -2486,12 +2488,14 @@ blockquote {
   flex: 1;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .endorsement-hero-right img {
   width: 100%;
   max-width: 420px;
   object-fit: contain;
+  z-index: 2;
 }
 
 /* =========================
@@ -2514,11 +2518,14 @@ blockquote {
 
   .endorsement-hero-right img {
     max-width: 300px;
+    z-index: 2;
   }
 }
 @media (max-width: 768px) {
   .endorsement-rotating-word {
     min-width: auto;
+    font-weight: 700;
+  font-size: 1.48em;
   }
 }
 
@@ -2555,6 +2562,7 @@ blockquote {
 /* Rotating word */
 .endorsement-rotating-word {
   font-weight: 700;
+  font-size: 1.48em;
   color: #3f8f4e; /* matches green accent in reference */
   margin-left: 0.25ch;
   display: inline-flex;
@@ -2628,6 +2636,7 @@ body.endorsements-page {
 /* Rotating word */
 .projects-rotating-word {
   font-weight: 700;
+  font-size: 1.48em;
   color: #3f8f4e; /* matches green accent in reference */
   margin-left: 0.25ch;
   display: inline-flex;
@@ -2649,6 +2658,7 @@ body.endorsements-page {
 /* Rotating word */
 .about-rotating-word {
   font-weight: 700;
+  font-size: 1.48em;
   color: #3f8f4e; /* matches green accent in reference */
   margin-left: 0.25ch;
   display: inline-flex;
@@ -2665,5 +2675,10 @@ body.endorsements-page {
 @media (min-width: 1024px) {
   .about-hero-subtitle {
     font-size: 1.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .endorsement-hero-right {
+    display: none;
   }
 }
