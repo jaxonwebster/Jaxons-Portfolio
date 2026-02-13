@@ -390,9 +390,20 @@ html, body {
 
 /* Bottom half content */
 .project-content {
-  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.06);  /* VERY light grey */
+  backdrop-filter: blur(4px);             /* soft glass effect */
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 28px 32px;
   text-align: left;
 }
+@media (max-width: 768px) {
+  .project-content {
+    padding: 30px 28px;
+  }
+}
+
+
 
 .project-content h3 {
   font-size: 1.1rem;
