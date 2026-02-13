@@ -397,6 +397,7 @@ html, body {
   padding: 28px 32px;
   text-align: left;
 }
+
 @media (max-width: 768px) {
   .project-content {
     padding: 30px 28px;
@@ -2573,7 +2574,7 @@ blockquote {
 .endorsement-hero-subtitle {
   font-size: clamp(1.25rem, 2vw, 1.6rem);
   font-weight: 400;
-  color: #1f2933; /* dark neutral, similar to "Hi, I'm" text */
+  color: #1f2933;
   margin-top: 1rem;
   line-height: 1.4;
 }
