@@ -1557,7 +1557,7 @@ font-weight: 800;
   letter-spacing: 0.25rem;
 
   /* Make it actually visible */
-  color: #8E7332;                 /* fully opaque */
+  color: #3E9E52;                 /* fully opaque */
   opacity: 0.95;                  /* visual softening */
   text-shadow: 0 3px 10px rgba(0,0,0,0.15); /* contrast boost */
 }
