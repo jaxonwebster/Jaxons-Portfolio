@@ -2723,8 +2723,3 @@ body.endorsements-page {
 .image-card:hover .flip-icon {
   transform: rotate(180deg);
 }
-
-.hero-title,
-#typewriter {
-  font-family: "Cornella", serif;
-}
