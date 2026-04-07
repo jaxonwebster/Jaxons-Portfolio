@@ -508,6 +508,7 @@ html, body {
   color: transparent;
 }
 
+
 /* Close Menu Button */
 .close-menu {
   align-self: flex-end;
@@ -2721,4 +2722,9 @@ body.endorsements-page {
 
 .image-card:hover .flip-icon {
   transform: rotate(180deg);
+}
+
+.hero-title,
+#typewriter {
+  font-family: "Cornella", serif;
 }
