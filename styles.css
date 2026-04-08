@@ -1467,7 +1467,7 @@ font-weight: 800;
 
 /* Glass-style card */
 .contact-card {
-  max-width: 520px;
+  max-width: 1000px;
   margin: 0 auto;
 
   background: rgba(255, 255, 255, 0.65);
@@ -1480,15 +1480,80 @@ font-weight: 800;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
 
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  gap: 50px;
+  align-items: center;
 }
 
-/* Individual contact rows */
+/* Left side (form) */
+.contact-left {
+  flex: 1;
+}
+
+/* Right side (info) */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* increase this */
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3E9E52;
+  outline: none;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #3E9E52; /* your icon green */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact-form button:hover {
+  background: #348944; /* slightly darker green */
+}
+
+.contact-form button:active {
+  transform: scale(0.98);
+}
+
+/* Contact items */
 .contact-item {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 15px;
 
   font-size: 1.05rem;
   color: #333;
@@ -1515,12 +1580,8 @@ font-weight: 800;
 /* Mobile */
 @media (max-width: 768px) {
   .contact-card {
+    flex-direction: column;
     padding: 2rem 1.75rem;
-  }
-}
-@media (max-width: 768px) {
-  .hero-portrait img {
-    max-height: 360px;
   }
 }
 
@@ -2722,4 +2783,54 @@ body.endorsements-page {
 
 .image-card:hover .flip-icon {
   transform: rotate(180deg);
+}
+.contact-form {
+  margin-top: 25px;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Make labels consistent */
+.contact-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4f46e5;
+  outline: none;
+}
+
+/* Button */
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #4338ca;
 }
