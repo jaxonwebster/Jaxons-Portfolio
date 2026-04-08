@@ -2720,7 +2720,6 @@ body.endorsements-page {
   perspective: 1000px;
   position: relative;
 }
-
 .card-inner {
   position: relative;
   width: 100%;
@@ -2729,10 +2728,6 @@ body.endorsements-page {
   transform-style: preserve-3d;
 }
 
-.image-card:hover .card-inner,
-.image-card:focus-within .card-inner {
-  transform: rotateY(180deg);
-}
 
 .card-front,
 .card-back {
