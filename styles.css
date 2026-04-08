@@ -522,7 +522,7 @@ html, body {
 }
 
 .close-menu:hover {
-  color: #6b5cff;
+  color: #6ccf81;
 }
 /* =========================
    FOOTER
@@ -606,7 +606,7 @@ html, body {
 }
 
 .footer-column a:hover {
-  color: #6b5cff;
+  color: #6ccf81;
 }
 
 /* Bottom Text */
@@ -658,7 +658,7 @@ html, body {
 }
 
 .project-btn:hover {
-  background: #5a4ae0;
+  background: #6ccf81;
   transform: translateY(-2px);
 }
 
@@ -1241,7 +1241,7 @@ font-weight: 800;
 }
 
 .project-link:hover {
-  background: #5b63d6;
+  background: #6ccf81;
   color: #ffffff;
 }
 
@@ -1312,7 +1312,7 @@ font-weight: 800;
 }
 
 .project-link:hover {
-  border-color: #5b63d6;
+  border-color: #6ccf81;
 }
 
 /* Mobile */
@@ -1579,7 +1579,7 @@ font-weight: 800;
 }
 
 .contact-item a:hover {
-  color: #5b63d6;
+  color: #6ccf81;
 }
 
 /* Mobile */
