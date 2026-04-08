@@ -1501,6 +1501,13 @@ font-weight: 800;
 .contact-left {
   margin-left: 50px;
 }
+@media (max-width: 768px) {
+  .contact-left,
+  .contact-right {
+    margin-left: 0;
+  }
+}
+
 /* Form */
 .contact-form {
   display: flex;
