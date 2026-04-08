@@ -140,36 +140,6 @@
         <a href="projects.html" class="project-btn">View My Work</a>
       </div>
     </div>
-<!--
-<section class="contact-section">
-
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/project3.jpg" alt="Project 3">
-      </div>
-      <div class="project-content">
-        <h3>Third Project</h3>
-        <p>
-          Description text that explains the purpose or outcome of the project.
-        </p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/project4.jpg" alt="Project 4">
-      </div>
-      <div class="project-content">
-        <h3>Final Project</h3>
-        <p>
-          A short summary highlighting the main idea or technology used.
-        </p>
-      </div>
-    </div>
-      
-</section>
--->
 
   </div>
 </section>
@@ -177,77 +147,82 @@
      CONTACT ME
 ========================== -->
 <section class="contact-section" id="contact">
-  <h2 class="gradient-text">Contact Me</h2>
 
   <div class="contact-card">
+    
+    <!-- TITLE (full width, not a column) -->
+    <h2 class="gradient-text contact-title">Contact Me</h2>
 
-    <!-- LEFT: FORM -->
-    <div class="contact-left">
-      <form class="contact-form" action="https://formspree.io/f/xaqlzwyv" method="POST">
-        
-        <input type="hidden" name="_subject" value="New message from portfolio site">
+    <!-- WRAPPER FOR COLUMNS -->
+    <div class="contact-row">
 
-        <label>
-          First Name:
-          <input type="text" name="firstName" placeholder="John" required>
-        </label>
+      <!-- LEFT: FORM -->
+      <div class="contact-left">
+        <form class="contact-form" action="https://formspree.io/f/xaqlzwyv" method="POST">
+          
+          <input type="hidden" name="_subject" value="New message from portfolio site">
 
-        <label>
-          Last Name:
-          <input type="text" name="lastName" placeholder="Doe" required>
-        </label>
+          <label>
+            First Name:
+            <input type="text" name="firstName" placeholder="John" required>
+          </label>
 
-        <label>
-          Email:
-          <input type="email" name="email" placeholder="john@example.com" required>
-        </label>
+          <label>
+            Last Name:
+            <input type="text" name="lastName" placeholder="Doe" required>
+          </label>
 
-        <label>
-          Message:
-          <textarea name="message" placeholder="Write your message here..." required></textarea>
-        </label>
+          <label>
+            Email:
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </label>
 
-        <input type="text" name="_gotcha" style="display:none">
+          <label>
+            Message:
+            <textarea name="message" placeholder="Write your message here..." required></textarea>
+          </label>
 
-        <button type="submit">Send Message</button>
-      </form>
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- RIGHT: CONTACT INFO -->
+      <div class="contact-right">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:jaxonwebster4@gmail.com">jaxonwebster4@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:5202600258">(520) 260-0258</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/jaxon-webster" target="_blank">
+            linkedin.com/in/jaxon-webster
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/jaxonwebster" target="_blank">
+            github.com/jaxonwebster
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-location-dot"></i>
+          <span>Logan, Utah</span>
+        </div>
+      </div>
+
     </div>
-
-    <!-- RIGHT: CONTACT INFO -->
-    <div class="contact-right">
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:jaxonwebster4@gmail.com">jaxonwebster4@gmail.com</a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <a href="tel:5202600258">(520) 260-0258</a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-linkedin-in"></i>
-        <a href="https://www.linkedin.com/in/jaxon-webster" target="_blank">
-          linkedin.com/in/jaxon-webster
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/jaxonwebster" target="_blank">
-          github.com/jaxonwebster
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fas fa-location-dot"></i>
-        <span>Logan, Utah</span>
-      </div>
-    </div>
-
   </div>
 </section>
-
 
   <!-- Footer -->
   <footer class="footer">

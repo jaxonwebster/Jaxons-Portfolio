@@ -297,6 +297,7 @@ html, body {
   max-height: 360px;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
 }
 
 .projects-page .project-image,
@@ -349,7 +350,6 @@ html, body {
 .project-card:nth-child(4) { transition-delay: 0.3s; }
 
 .project-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
 }
 /* Top half image */
@@ -1480,22 +1480,27 @@ font-weight: 800;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
 
   display: flex;
-  gap: 50px;
-  align-items: center;
+  flex-direction: column; /* 👈 THIS is the key */
 }
 
-/* Left side (form) */
-.contact-left {
-  flex: 1;
-}
+
 
 /* Right side (info) */
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: 25px; /* increase this */
+  gap: 35px; /* increase this */
+  margin-left: 50px;
 }
 
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+.contact-left {
+  margin-left: 50px;
+}
 /* Form */
 .contact-form {
   display: flex;
@@ -2815,7 +2820,7 @@ body.endorsements-page {
 /* Focus */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #4f46e5;
+  border-color: #3E9E52;
   outline: none;
 }
 
@@ -2823,7 +2828,7 @@ body.endorsements-page {
 .contact-form button {
   margin-top: 10px;
   padding: 12px 20px;
-  background: #4f46e5;
+  background: #3E9E52;
   color: white;
   font-weight: 600;
   border: none;
@@ -2832,5 +2837,23 @@ body.endorsements-page {
 }
 
 .contact-form button:hover {
-  background: #4338ca;
+  background: #56c46d;
+}
+/* Title inside card */
+.contact-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+}
+@media (max-width: 768px) {
+  .contact-row {
+    flex-direction: column;
+  }
 }
