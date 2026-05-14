@@ -259,10 +259,10 @@ const chatbotClose = document.getElementById("chatbotClose");
 const chatbotBody = document.getElementById("chatbotBody");
 
 const responses = {
-  skills: `I work with HTML, CSS, JavaScript, React, Python, SQL, and .NET. Feel free to check out my <a href="resume.html" class="chat-link">resume</a> page for a more detailed summary!`,
-  experience: 'I’ve worked as a Cloud Computing TA, Data Analyst, and Web Design Intern building real-world systems. For more information, visit my <a href="resume.html" class="chat-link">resume</a> page',
+  skills: `I work with HTML, CSS, JavaScript, React, Python, SQL, and .NET, and AWS. Feel free to check out my <a href="resume.html" class="chat-link">resume</a> page for a more detailed summary!`,
+  experience: 'I’ve worked as a Cloud Software Engineer, Cloud Computing TA, Data Analyst, and Web Designer. For more information, visit my <a href="resume.html" class="chat-link">resume</a> page',
   projects: 'You should definitely check out CineNiche and my other web design projects on my <a href="projects.html" class="chat-link">projects</a> page!',
-  contact: 'You can reach me via email, LinkedIn, or call/text me anytime! You can find my contact information <a href="#contact" class="chat-link">here</a>'
+  contact: 'You can reach me via email, LinkedIn, or message me though this site! Feel free to call/text me anytime! You can find my contact information <a href="#contact" class="chat-link">here</a>'
 };
 
 if (chatbotToggle && chatbotWindow && chatbotClose && chatbotBody) {
