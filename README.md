@@ -1,4 +1,4 @@
-# 🚀 Jaxon Webster | Professional Portfolio
+# Jaxon Webster | Professional Portfolio
 
 [![Live Site](https://img.shields.io/badge/Live-jaxonwebster.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jaxonwebster.com)
 
