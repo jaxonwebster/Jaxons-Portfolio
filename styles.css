@@ -3218,3 +3218,78 @@ body.endorsements-page {
     gap: 30px;
   }
 }
+/* =========================================================
+   FEATURED PROJECTS CARD (SOLID BACKGROUND)
+   ========================================================= */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: #ffffff; /* 100% solid white hides background canvas/dots */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2; /* Ensures card sits firmly on top of canvas layer */
+}
+
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   TESTIMONIAL CARD (SOLID BACKGROUND)
+   ========================================================= */
+.testimonial-card {
+  background: #ffffff; /* 100% solid white hides background canvas/dots */
+  padding: 2rem 1.75rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  z-index: 2; /* Ensures card sits firmly on top of canvas layer */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+/* =========================================================
+   MOBILE RESPONSIVENESS FIX FOR ALL FEATURED CARDS
+   ========================================================= */
+@media (max-width: 850px) {
+  
+  /* Forces BOTH normal and reversed cards into 1 single vertical column */
+  .featured-card,
+  .featured-card.reverse {
+    grid-template-columns: 1fr !important; /* Forces 1-column layout */
+  }
+
+  /* Ensures image takes up top position on mobile for both cards */
+  .featured-card .featured-image,
+  .featured-card.reverse .featured-image {
+    order: 1 !important;
+    width: 100%;
+    height: 220px; /* Gives the image a clean mobile height */
+    min-height: auto;
+  }
+
+  /* Ensures content sits below the image */
+  .featured-card .featured-content,
+  .featured-card.reverse .featured-content {
+    order: 2 !important;
+    padding: 1.75rem 1.25rem; /* Comfortably fits small screens */
+  }
+
+  .featured-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Prevents awkward cropping or stretching */
+  }
+}
