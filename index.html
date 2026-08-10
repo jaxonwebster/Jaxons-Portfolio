@@ -3,210 +3,312 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Jaxon Webster | Professional Portfolio</title>
-<meta name="description" content="Portfolio of Jaxon Webster, a programmer based in Utah. View my latest projects in Cybersecurity, Web Development, and Cloud Computing.">
+  <meta name="description" content="Portfolio of Jaxon Webster, a programmer based in Utah. View my latest projects in Cybersecurity, Web Development, and Cloud Computing.">
 
-  <!-- Styles --->
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="icon" href="images/cartoon.png" type="image/x-icon">
 </head>
 <body>
-<div class="signal-bg">
-  <canvas id="signalCanvas"></canvas>
-</div>
 
+  <div class="signal-bg">
+    <canvas id="signalCanvas"></canvas>
+  </div>
 
-
-  <!-- Navbar --->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">JW</div>
     <button class="menu-btn" id="menuBtn">☰</button>
   </header>
 
   <!-- Slide-out Menu -->
-<nav class="side-menu" id="sideMenu">
-  <button class="close-menu" id="closeMenu">✕</button>
-
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
-  <a href="endorsements.html">Endorsements</a>
-</nav>
-
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-menu" id="closeMenu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="endorsements.html">Endorsements</a>
+  </nav>
 
   <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
   <!-- Hero -->
   <section class="hero hero-split">
-  <!-- LEFT SIDE -->
-  <div class="hero-left">
-    <h1 class="hero-title">
-  <span id="typewriter"></span>
-</h1>
-
-
-    <p class="hero-text">
-  I build <span id="rotating-word"></span>
-</p>
-
-
-    <div class="hero-buttons">
-      <a href="projects.html" class="btn primary">View My Work</a>
-      <a href="about.html" class="btn secondary">About Me</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
-    </div>
-  </div>
-
-  <!-- RIGHT SIDE -->
-  <div class="hero-right">
-    <img src="images/cartoon.png" alt="waving cartoon of Jaxon Webster" />
-  </div>
-</section>
-
-  <!-- Projects -->
-<section id="projects" class="projects">
-  <h2 class="gradient-text">Featured Projects</h2>
-
-
-  <div class="project-grid">
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/IMG_5556.jpg" alt="Image of a website called Cineniche">
-      </div>
-      <div class="project-content">
-        <h3>CineNiche</h3>
-        <p>
-          My team and I placed 2nd in a coding competition to create a functional streaming service that recommends movies to you based on watch history/preferences. 
-        </p>
-        <a href="https://youtu.be/du8ue6cPfEI" class="project-btn">Watch Demo</a>
-        <a href="projects.html" class="project-btn">Learn More</a>
+    <!-- LEFT SIDE -->
+    <div class="hero-left">
+      <h1 class="hero-title">
+        <span id="typewriter"></span>
+      </h1>
+      <p class="hero-text">
+        I build <span id="rotating-word"></span>
+      </p>
+      <div class="hero-buttons">
+        <a href="projects.html" class="btn primary">View My Work</a>
+        <a href="about.html" class="btn secondary">About Me</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/image.png" alt="Web Deisgn Experience">
-      </div>
-      <div class="project-content">
-        <h3>Web Design Intern</h3>
-        <p>
-          As a Web Design Intern for Lemonade Stand, I helped design and create 100+ different sites for clients.
-        </p>
-        <a href="projects.html" class="project-btn">View My Work</a>
-      </div>
+    <!-- RIGHT SIDE -->
+    <div class="hero-right">
+      <img src="images/cartoon.png" alt="waving cartoon of Jaxon Webster" />
     </div>
+  </section>
 
-  </div>
-</section>
-<!-- =========================
-     CONTACT ME
+  <!-- =========================
+     FEATURED PROJECTS SECTION
 ========================== -->
-<section class="contact-section" id="contact">
+<section id="projects" class="projects-section-wrapper">
+  <div class="projects-inner">
+    <div class="section-header">
+      <h2 class="gradient-text">Featured Projects</h2>
+      <p class="section-subtitle">A showcase of recent development projects, competitions, and client work.</p>
+    </div>
 
-  <div class="contact-card">
-    
-    <!-- TITLE (full width, not a column) -->
-    <h2 class="gradient-text contact-title">Contact Me</h2>
+    <div class="projects-container">
 
-    <!-- WRAPPER FOR COLUMNS -->
-    <div class="contact-row">
-
-      <!-- LEFT: FORM -->
-      <div class="contact-left">
-        <form class="contact-form" action="https://formspree.io/f/xaqlzwyv" method="POST">
+      <!-- Project 1 -->
+      <article class="featured-card">
+        <div class="featured-image">
+          <img src="images/IMG_5556.jpg" alt="Cineniche streaming website screenshot">
+        </div>
+        <div class="featured-content">
+          <div class="project-badge"><i class="fas fa-trophy"></i> 2nd Place Competition Winner</div>
+          <h3>CineNiche Streaming Service</h3>
+          <p>
+            My team and I placed 2nd in a coding competition to create a functional streaming service. Users can create an account, rate movies, and get suggestions based on their history. Infinite scrolling also allows users to use the app for longer, and Admin can edit the database of movies and manage users.
+          </p>
           
-          <input type="hidden" name="_subject" value="New message from portfolio site">
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>C#</span>
+            <span>.NET</span>
+            <span>Predictive Modeling</span>
+            <span>REST API</span>
+            <span>Database</span>
+            <span>Cybersecruity</span>
+          </div>
 
-          <label>
-            First Name:
-            <input type="text" name="firstName" placeholder="John" required>
-          </label>
-
-          <label>
-            Last Name:
-            <input type="text" name="lastName" placeholder="Doe" required>
-          </label>
-
-          <label>
-            Email:
-            <input type="email" name="email" placeholder="john@example.com" required>
-          </label>
-
-          <label>
-            Message:
-            <textarea name="message" placeholder="Write your message here..." required></textarea>
-          </label>
-
-          <input type="text" name="_gotcha" style="display:none">
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-
-      <!-- RIGHT: CONTACT INFO -->
-      <div class="contact-right">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:jaxonwebster4@gmail.com">jaxonwebster4@gmail.com</a>
+          <div class="card-actions">
+            <a href="https://youtu.be/du8ue6cPfEI" target="_blank" class="btn btn-sm primary">
+              <i class="fas fa-play"></i> Watch Demo
+            </a>
+            <a href="projects.html" class="btn btn-sm outline">Learn More</a>
+          </div>
         </div>
+      </article>
 
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <a href="tel:5202600258">(520) 260-0258</a>
+      <!-- Project 2 -->
+      <article class="featured-card reverse">
+        <div class="featured-image">
+          <img src="images/swjscreenshot.png" alt="SWJ">
         </div>
+        <div class="featured-content">
+          <div class="project-badge internship"><i class="fas fa-briefcase"></i> Small Business Co-Owner</div>
+          <h3>E-Commerce Site</h3>
+          <p>
+            My wife and I design/sell religious-themed stickers and made over $20,000 in 2 years. To eliminate third-party platform fees, establish full brand control, and elevate our customer experience beyond an "Etsy shop," I designed and built a custom, fully functional e-commerce website. It allows for secure online payment processing, and lets us keep 100% of our profits while serving as a practical, hands-on web development project.
+          </p>
+          
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>UI/UX Design</span>
+            <span>Javascript</span>
+            <span>Stripe API</span>
+          </div>
 
-        <div class="contact-item">
-          <i class="fab fa-linkedin-in"></i>
-          <a href="https://www.linkedin.com/in/jaxon-webster" target="_blank">
-            linkedin.com/in/jaxon-webster
-          </a>
+          <div class="card-actions">
+            <a href="https://stickwithjesusco.com/index.html" class="project-btn" target="_blank">
+        View Website
+      </a>
+      
+      
+          </div>
         </div>
-
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/jaxonwebster" target="_blank">
-            github.com/jaxonwebster
-          </a>
-        </div>
-
-        <div class="contact-item">
-          <i class="fas fa-location-dot"></i>
-          <span>Logan, Utah</span>
-        </div>
-      </div>
+      </article>
 
     </div>
+
+    <div class="view-more-container">
+      <a href="projects.html" class="btn secondary">View All Projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     TESTIMONIALS SECTION
+========================== -->
+<section class="testimonials-section-wrapper">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <h2 class="gradient-text">Testimonials</h2>
+      <p class="section-subtitle">What my teams and peers have to say about working with me.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "You were such a great addition to our web team! You're a total team player that tackled any task or project that was thrown at you like a champ. I'm really grateful for your drive and attention to detail that helped us present a client with a front-facing solution that you owned from start to finish!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SU</div>
+          <div class="author-info">
+            <h4>Sergio Udave</h4>
+            <span>Web Designer - Lemonade Stand</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "It is a pleasure to strongly endorse Jaxon Webster. Jaxon can connect the dots. He asks key questions that clarify processes. He is a delight to work with and knows how to build and interact with teams."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RG</div>
+          <div class="author-info">
+            <h4>Reid Grawe</h4>
+            <span>Director of Placement - Brigham Young University</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "You have one of the kindest hearts I've ever known. You are such a blessing to all those around you, your maturity and your judgement are so inspiring and needed. You're amazing!"
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JT</div>
+          <div class="author-info">
+            <h4>Josh Tanner</h4>
+            <span>Accountant & Peer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-cta">
+      <a href="endorsements.html" class="btn primary">
+        See All Endorsements <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- =========================
+     CONTACT ME SECTION
+========================== -->
+<section class="contact-section-wrapper" id="contact">
+  <div class="contact-inner">
+    
+    <!-- Section Title OUTSIDE the white card -->
+    <div class="section-header">
+      <h2 class="gradient-text">Contact Me</h2>
+    </div>
+
+    <!-- Contact Form Card -->
+    <div class="contact-card">
+      <div class="contact-row">
+
+        <!-- LEFT: FORM -->
+        <div class="contact-left">
+          <form class="contact-form" action="https://formspree.io/f/xaqlzwyv" method="POST">
+            <input type="hidden" name="_subject" value="New message from portfolio site">
+
+            <label>
+              First Name:
+              <input type="text" name="firstName" placeholder="John" required>
+            </label>
+
+            <label>
+              Last Name:
+              <input type="text" name="lastName" placeholder="Doe" required>
+            </label>
+
+            <label>
+              Email:
+              <input type="email" name="email" placeholder="john@example.com" required>
+            </label>
+
+            <label>
+              Message:
+              <textarea name="message" placeholder="Write your message here..." required></textarea>
+            </label>
+
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- RIGHT: CONTACT INFO -->
+        <div class="contact-right">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:jaxonwebster4@gmail.com">jaxonwebster4@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:5202600258">(520) 260-0258</a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-linkedin-in"></i>
+            <a href="https://www.linkedin.com/in/jaxon-webster" target="_blank">
+              linkedin.com/in/jaxon-webster
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/jaxonwebster" target="_blank">
+              github.com/jaxonwebster
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>Logan, Utah</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-profile">
         <img src="images/portrait.jpg" alt="Portrait of Jaxon Webster" class="footer-avatar" />
         <p class="footer-name">Jaxon Webster</p>
-
         <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/jaxon-webster" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="mailto:jaxonwebster4@gmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="tel:5202600258">
-            <i class="fas fa-phone"></i>
-          </a>
+          <a href="https://www.linkedin.com/in/jaxon-webster" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:jaxonwebster4@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:5202600258"><i class="fas fa-phone"></i></a>
         </div>
       </div>
 
@@ -222,43 +324,31 @@
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
         <a href="endorsements.html">Endorsements</a>
-        <a href="#contact">Resume</a>
+        <a href="resume.html">Resume</a>
       </div>
-
     </div>
     <p class="footer-bottom">© 2026 Jaxon Webster</p>
   </footer>
-  <!-- =========================
-     MINI CHAT ASSISTANT
-========================== -->
-<div class="chatbot">
 
-  <button class="chatbot-toggle" id="chatbotToggle">
-    💬
-  </button>
-
-  <div class="chatbot-window" id="chatbotWindow">
-    <div class="chatbot-header">
-      <span>Ask Jaxon</span>
-      <button id="chatbotClose">✕</button>
-    </div>
-
-    <div class="chatbot-body" id="chatbotBody">
-      <p class="bot-message">
-        Hey! 👋 What would you like to know?
-      </p>
-    </div>
-
-    <div class="chatbot-questions">
-      <button data-question="skills">What technologies do you use?</button>
-      <button data-question="experience">What kind of experience do you have?</button>
-      <button data-question="projects">What projects should I check out?</button>
-      <button data-question="contact">How can I contact you?</button>
+  <!-- Mini Chat Assistant -->
+  <div class="chatbot">
+    <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <span>Ask Jaxon</span>
+        <button id="chatbotClose">✕</button>
+      </div>
+      <div class="chatbot-body" id="chatbotBody">
+        <p class="bot-message">Hey! 👋 What would you like to know?</p>
+      </div>
+      <div class="chatbot-questions">
+        <button data-question="skills">What technologies do you use?</button>
+        <button data-question="experience">What kind of experience do you have?</button>
+        <button data-question="projects">What projects should I check out?</button>
+        <button data-question="contact">How can I contact you?</button>
+      </div>
     </div>
   </div>
-
-</div>
-
 
   <script src="script.js"></script>
 </body>

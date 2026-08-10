@@ -2859,3 +2859,362 @@ body.endorsements-page {
     flex-direction: column-reverse;
   }
 }
+/* =========================================================
+   FEATURED PROJECTS SECTION (FULL WIDTH WRAPPER)
+   ========================================================= */
+.projects-section-wrapper {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.025); /* Faint full-width backdrop */
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 5rem 1.5rem;
+}
+
+.projects-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Horizontal Project Card */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.featured-card.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.featured-card.reverse .featured-image {
+  order: 2;
+}
+
+.featured-card.reverse .featured-content {
+  order: 1;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.featured-card:hover .featured-image img {
+  transform: scale(1.04);
+}
+
+.featured-content {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(62, 158, 82, 0.12);
+  color: #2e7a3f;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.project-badge.internship {
+  background: rgba(104, 112, 203, 0.12);
+  color: #4b53b8;
+}
+
+.featured-content h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.featured-content p {
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Tech Pills */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.tech-tags span {
+  background: #f0f2f5;
+  color: #444;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.88rem;
+  border-radius: 8px;
+}
+
+.btn.outline {
+  border: 1.5px solid #3E9E52;
+  color: #3E9E52;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.outline:hover {
+  background: #3E9E52;
+  color: #ffffff;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+/* =========================================================
+   TESTIMONIALS SECTION (3 COLUMNS)
+   ========================================================= */
+.testimonials-section-wrapper {
+  width: 100%;
+  padding: 5rem 1.5rem;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Side-by-Side Cards */
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 2rem 1.75rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.93rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #44805b, #3E9E52);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.author-info h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.author-info span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.testimonials-cta {
+  text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================= */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 850px) {
+  .featured-card,
+  .featured-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card.reverse .featured-image {
+    order: 0;
+  }
+
+  .featured-card.reverse .featured-content {
+    order: 0;
+  }
+
+  .featured-image {
+    height: 220px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile phones */
+  }
+
+  .card-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section-wrapper {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card Container */
+.contact-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-row {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.contact-left {
+  flex: 1.2;
+}
+
+.contact-right {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-row {
+    flex-direction: column-reverse; /* Form on top, info on bottom for mobile */
+    gap: 30px;
+  }
+}
